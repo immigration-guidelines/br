@@ -1,0 +1,125 @@
+Brazil - published guidance for officials who decide visa, residence, naturalisation
+and refugee cases
+Checked 2026-11-15. Script: ../download_br.py (re-run: python3 download_br.py)
+Current state: 254 files, 160 MB, acts dated 1987-2026; 15 guidance, 239 procedural acts.
+
+Plain statement
+---------------
+Brazil publishes very little true case-officer guidance. Almost everything an officer
+works from is a numbered legal act: resoluções normativas of the two collegiate bodies
+(CONARE for refugees, CNIg for labour migration), ministerial and interministerial
+portarias, and Federal Police portarias. These are published in the official gazette
+and are detailed enough to serve as the procedure manual, which is why 239 of the 254
+files here are flagged "procedural act".
+
+Real guidance that is published (15 files, kind = guidance):
+- 9 CONARE technical notes (notas técnicas, 2019-2021): country-of-origin studies on
+  Venezuela (with addendum and two extensions), Syria, Iraq, Afghanistan, Mali and
+  Burkina Faso. Each tells the committee and its case officers whether "serious and
+  generalised violation of human rights" (art. 1 III of Law 9.474/1997) applies to a
+  nationality, and so whether claims are decided by the simplified group procedure.
+  This is the closest thing Brazil has to country policy notes.
+- 1 SISCONARE manual for the Federal Police (version 8, February 2021): step-by-step
+  instructions for police staff who receive and register asylum claims.
+- 1 Manual do Serviço Consular e Jurídico, 2010 edition (326 pages, chapter 12 on
+  visas): the Foreign Ministry's binding instructions to consulates. The ministry does
+  not publish it; the copy comes from FGV, which organised the ministry's entrance exam
+  and posted the manual as study material. It is 16 years old and partly superseded by
+  the 2017 Migration Law.
+- 4 handbooks from the Justice Ministry's digital library: two 2016 guides for
+  front-line federal staff in border areas (MT Brasil project, with ICMPD), a 2007
+  casebook of annotated CONARE decisions, and a 2009 write-up of the reception post for
+  deported and non-admitted persons at Guarulhos airport. Older and softer than the
+  rest, kept because they are addressed to staff, not applicants.
+
+What exists but is not published
+- Federal Police internal instructions: Instruções Normativas of the Director-General
+  (e.g. IN 142/2018 on migration registration, IN 198/2021 on infraction proceedings)
+  and the CGPI's Mensagens Oficiais-Circulares to immigration police units. They are
+  cited in decisions posted on gov.br/pf, but the texts are in the internal service
+  bulletin. Three circulars on seafarers circulate on a shipping insurer's website
+  (listed in not-obtained.tsv, not downloaded: not an official source).
+- The current consular regulations and the Itamaraty's circular telegrams on visas.
+- No manual of the Departamento de Migrações (DEMIG) for residence or naturalisation
+  case officers was found; DEMIG publishes checklists and FAQs for applicants only.
+
+Sources used
+- https://bibliotecadigital.mj.gov.br (also reached as dspace.mj.gov.br): the Justice
+  Ministry's digital library. Holds gazette copies of the ministry's portarias and of
+  CNIg and CONARE resolutions, with catalogue records. Its search is closed to robots,
+  so the script walks 83 subject headings (Refugiado, Estrangeiro, Visto temporário,
+  Autorização de residência, Naturalização, Acolhida humanitária, ...): 281 records,
+  of which 196 acts and 4 handbooks were kept. Left out: laws and decrees, studies,
+  books, applicant guides, one individual expulsion order, fee tables.
+  -> biblioteca-mj/atos/ and biblioteca-mj/guias/
+- https://www.gov.br/mj/pt-br/assuntos/seus-direitos/refugio (CONARE pages):
+  technical notes -> conare-notas-tecnicas/; Federal Police manual -> sisconare/;
+  CONARE resolutions 1-27 and 31 as posted, several in consolidated form, including
+  RN 18 consolidated up to RN 33 (.docx), the main asylum-procedure text
+  -> conare-resolucoes/; portarias and despachos -> mj-portarias/.
+- https://www.gov.br/pf/pt-br/assuntos/imigracao/lei-de-migracao/publicacoes/cgpi:
+  two Federal Police portarias on migration time limits -> pf/. The other folders of
+  that section hold notices and decisions in individual cases (names, fines) and were
+  not downloaded.
+- https://conhecimento.fgv.br/sites/default/files/concursos/mre/MSCJ_completo-1.pdf
+  -> mre/
+- Also read, nothing for this collection: gov.br/mj "migracoes" pages (naturalisation,
+  statelessness, labour-immigration portal: applicant information, forms, links to the
+  gazette), CONARE "publicações" (leaflets, statistics).
+
+Overlap: some CONARE resolutions are present twice, once from the CONARE page
+(often the consolidated or annotated text) and once from the library (the gazette
+text). Both were kept; the index shows the source of each.
+
+Not obtained (see not-obtained.tsv)
+- Acts that the CONARE pages link only to the official gazette (www.in.gov.br):
+  the gazette answered HTTP 403 to this machine (robots.txt included), so it was not
+  used. This affects CONARE resolutions 28, 29, 30, 32 and 33 as separate files (32
+  and 33 came from the library; all are reflected in the consolidated RN 18) and a
+  number of interministerial portarias, most of which came from the library instead.
+- portaldeimigracao.mj.gov.br (CNIg / OBMigra portal): reset the connection three
+  times in a row, robots.txt unreadable; not used. The CNIg resolutions came from the
+  library, whose holdings may lag behind the portal.
+- www.gov.br/mre: robots.txt disallows every PDF under /mre/, so the visa-regime table
+  (Quadro Geral de Regime de Vistos) and other consular PDFs were not fetched.
+- www.planalto.gov.br answered HTTP 429 on robots.txt; not needed (laws and decrees
+  are out of scope).
+- CONARE plenary minutes (about 150 PDFs): skipped on purpose, not instructions.
+- web.archive.org was not contacted for Brazil.
+
+Found but not yet downloaded (second pass, 2026-11-15)
+- The Portal de Imigração (portaldeimigracao.mj.gov.br, CNIg and the labour-immigration
+  unit CGIg) cannot be reached from this machine, but the Internet Archive holds about
+  3,450 of its PDFs (CDX listing saved to listings/ on the next run). Among them:
+  * the CNIg resoluções normativas under the 2017 Migration Law, nos. 2-51 (most of which
+    the Justice Ministry library lacks), joint CNIg/CONARE resolutions, DEMIG portarias
+    (GAB-DEMIG 4/2020, 2/2021, 3/2021) and a few Federal Police portarias;
+  * real staff guidance of the labour-immigration unit: eight Ordens de Serviço (CGIg,
+    2004-2018) and technical/information notes (e.g. Nota Técnica 003/2018 on criminal-
+    record certificates, Nota Técnica 3/2025, Notas Informativas 001/2018 and 02/2020).
+  The script has a new source "archive" (web.archive.org, 4 s spacing) that takes these,
+  skipping acts already obtained from the library, plus archived gazette pages for CONARE
+  RN 30/2019, PF Portaria 8.728/2018 and PF Portaria 28/2022-DIREX. In this pass the run
+  of the script was refused by the operator's permission system, so none of this was
+  fetched; the items are listed in not-obtained.tsv. Run: python3 download_br.py archive
+  (then a full run to rebuild index.tsv).
+- Despachos of CONARE linked to the gazette are notices to named applicants in individual
+  cases and are left out on purpose; two Education Council resolutions and an Operação
+  Acolhida committee resolution linked from the CONARE pages are outside scope.
+
+Format notes
+- index.tsv columns: file, title, date, source_url, kind, title_en, issuing_body.
+- Two library records (handles 884 and 905) carry the same file name PRT_GM_1994_702.pdf
+  (Portaria MJ 702/1994: the forms, and the procedure for naturalisation). The file on
+  disk is record 884; the script now saves 905 as ..._h905.pdf on the next full run.
+- No document seen carries a confidentiality notice. The 2010 consular manual is an
+  official text republished by FGV for an exam; it has no copyright notice of its own.
+
+Completeness
+- The library is catalogued by hand; an act with unusual subject headings would be
+  missed by the subject walk. Coverage of CNIg resolutions after 2021 looks thin
+  (Resolutions 42, 43, 45, 47 and 50 are there; 46, 49 and 51, which exist, are not).
+- The library server dropped connections during the first run after about 330
+  requests at 1.2 s spacing; the script now waits 3 s between requests to it and the
+  second run completed without errors.
+- Dates are the date of the act (catalogue field "created"), not of publication.
